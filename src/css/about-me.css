@@ -4,11 +4,16 @@
 
 .about-content {
     margin-bottom: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 52px;
     font-weight: 400;
     line-height: 64px;
     letter-spacing: 1.7999999523162842px;
     text-align: left;
+}
+
+.common-span {
+    color: #00b068;
 }
 
 .title {
