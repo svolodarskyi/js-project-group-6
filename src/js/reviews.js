@@ -38,7 +38,7 @@ const initReviewsSwiper = async () => {
 
   if (!reviewsData.length) {
     reviewsEl.innerHTML = '<p>Not found</p>';
-    return;
+    return alert('Error');
   }
 
   const reviewsListHTML = reviewsData
@@ -53,9 +53,6 @@ const initReviewsSwiper = async () => {
     navigation: {
       nextEl: '.swiper-btn-next',
       prevEl: '.swiper-btn-back',
-    },
-    mousewheel: {
-      forceToAxis: true,
     },
 
     breakpoints: {

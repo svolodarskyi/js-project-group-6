@@ -1,12 +1,5 @@
-.reviews-container {
-  min-width: 320px;
-  max-width: 360px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .section-titel {
-  font-family: Impact;
+  font-family: var(--font-section-header);
   font-size: 52 px;
   letter-spacing: 1.8 px;
   line-height: 64 px;
@@ -43,6 +36,9 @@
 
 .scroll-btns {
   width: 320px;
+
+  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 24px;
   margin-bottom: 80px;
   display: flex;
@@ -66,12 +62,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .reviews-container,
-  .swiper-wrapper {
-    width: 768px;
-  }
   .section-titel {
-    font-family: Impact;
+    font-family: var(--font-section-header);
     font-size: 108 px;
     letter-spacing: 1.8 px;
     line-height: 124 px;
@@ -84,15 +76,11 @@
   }
 
   .scroll-btns {
-    width: 704px;
+    width: 768px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .reviews-container,
-  .swiper-wrapper {
-    width: 1280px;
-  }
   .swiper-wrapper {
     flex-direction: row;
   }
@@ -102,6 +90,6 @@
   }
 
   .scroll-btns {
-    width: 1200px;
+    width: 1240px;
   }
 }
