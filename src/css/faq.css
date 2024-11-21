@@ -1,0 +1,104 @@
+/* Styles for Mobile devices */
+.faq-title {
+    font-family: var(--font-section-header);
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 123%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-black);
+
+}
+
+.span-faq-title {
+    color: var(--color-green);
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+
+}
+
+.faq-list {
+    padding: 0 24px;
+
+}
+
+.faq-list-item {
+    padding: 28px 0;
+}
+
+.faq-list-item-title {
+    font-family: var(--font-section-header);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-black);
+}
+
+.faq-list-item-text {
+    font-family: var(--font-text);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--color-black);
+    margin-top: 24px;
+
+}
+
+/* Styles for Tablet devices */
+
+@media only screen and (min-width: 768px) {
+    .faq-title {
+
+        font-size: 108px;
+        line-height: 115%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: var(--color-black);
+
+    }
+
+
+
+
+}
+
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1280px) {
+    .faq-title {
+        font-family: var(--font-section-header);
+        font-weight: 400;
+        font-size: 108px;
+        line-height: 115%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: var(--color-black);
+
+    }
+    .faq-title-container{
+        
+            width: 520px;
+    }
+    
+   .faq-container {
+        display: flex;
+        flex-direction: row; 
+         
+   }
+
+         .faq-list {
+        position: relative;
+            top: 276px;     
+            width: 592px;
+    
+        } 
+
+  
+}
