@@ -17,6 +17,7 @@
     --color-grey: #E4E5E6;
     --color-grey-hover: #BBBBBB;
     --color-red-error: #E74A3B;
+    --color-footer-border-top: var(--color-grey);
     --background-color: var(--color-white);
 }
 
@@ -29,6 +30,7 @@
     --color-grey: #E4E5E6;
     --color-grey-hover: #BBBBBB;
     --color-red-error: #E74A3B;
+    --color-footer-border-top: var(--color-grey);
     --background-color: var(--color-white);
 }
 
@@ -41,6 +43,7 @@
     --color-grey: #2A2D32;
     --color-grey-hover: #3B3F45;
     --color-red-error: #E74A3B;
+    --color-footer-border-top: var(--color-white);
     --background-color: var(--color-black);
   }
   
