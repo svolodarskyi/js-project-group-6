@@ -2,6 +2,10 @@
 import { register } from 'swiper/element/bundle';
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
+// Описаний у документації
+import iziToast from 'izitoast';
+// Додатковий імпорт стилів
+import 'izitoast/dist/css/iziToast.min.css';
 
 register();
 
@@ -38,7 +42,11 @@ const initReviewsSwiper = async () => {
 
   if (!reviewsData.length) {
     reviewsEl.innerHTML = '<p>Not found</p>';
-    return alert('Error');
+    iziToast.error({
+      message: 'Reviews cannot be loaded at this time.',
+      position: 'bottomRight',
+    });
+    // return alert('Reviews cannot be loaded at this time.');
   }
 
   const reviewsListHTML = reviewsData
@@ -49,7 +57,12 @@ const initReviewsSwiper = async () => {
   new Swiper('.swiper', {
     slidesPerView: 1,
     // direction: 'horizontal',
-
+    keyboard: {
+      enabled: true,
+    },
+    mousewheel: {
+      enabled: true,
+    },
     navigation: {
       nextEl: '.swiper-btn-next',
       prevEl: '.swiper-btn-back',

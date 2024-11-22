@@ -1,5 +1,5 @@
 .section-titel {
-  font-family: var(--font-section-header);
+  font-family: Impact;
   font-size: 52 px;
   letter-spacing: 1.8 px;
   line-height: 64 px;
@@ -8,10 +8,10 @@
 }
 
 .swiper-wrapper {
-  padding: 0 20px;
+  /* padding: 0 20px; */
   display: flex;
   align-items: center;
-  gap: 24px 10px;
+  gap: 24px 0px;
 }
 
 .swiper-slide {
@@ -76,17 +76,19 @@
   }
 
   .scroll-btns {
-    width: 768px;
+    width: 704px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .swiper-wrapper {
+    padding: 32px;
     flex-direction: row;
+    gap: 0 38px;
   }
 
   .swiper-slide {
-    width: 592px;
+    width: 592px !important;
   }
 
   .scroll-btns {
