@@ -1,0 +1,269 @@
+:root {
+    --font-family: "Poppins", sans-serif;
+    --second-family: "Impact", sans-serif;
+    --third-family: "Montserrat", sans-serif;
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.menu,
+.address {
+    display: none;
+}
+
+.header-logo-lloyd {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--black);
+
+
+}
+
+.header-logo {
+    padding: 20px 0;
+    display: block;
+}
+
+.header-logo-jefferson {
+    color: var(--color-green);
+}
+
+.burger-btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.burger-icon {
+    display: block;
+    fill: #2f2f37;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+
+    .header-logo {
+        /* padding: 32px 0; */
+        margin-right: 166px;
+    }
+
+    .burger-btn {
+        display: none;
+    }
+
+    .nav {
+
+        display: flex;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+
+
+    .header-link {
+        font-family: var(--font-family);
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.03em;
+        color: var(--black);
+    }
+
+    .header-link:hover,
+    .header-link:focus {
+        color: var(--color-green-hover);
+
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+
+    .header-logo {
+        padding: 36px 20px 36px 0;
+        margin-right: 678px;
+    }
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-container {
+
+    position: relative;
+    width: 360px;
+    height: 704px;
+    background: white;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+
+}
+
+.modal-header-container {
+    width: 320px;
+    height: 64px;
+    /* padding: 36px 0; */
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+
+.modal.active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.modal-container.active {
+    transform: translateY(0);
+}
+
+.modal-logo {
+    padding: 20px 0 20px 20px;
+    margin-right: 108px;
+}
+
+
+.close-btn {
+    border: none;
+    background-color: transparent;
+    padding: 16px 16px 16px 0;
+}
+
+
+.modal-menu {
+    list-style: none;
+    padding-top: 260px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-link {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--color-black);
+}
+
+.modal-link:hover {
+    color: var(--color-green-hover);
+}
+
+
+.burger-btn.opened svg path {
+    fill: #fff;
+    transition: all 0.3s ease;
+}
+
+.burger-btn.opened svg path:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-btn.opened svg path:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-btn.opened svg path:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+/* .....жж */
+
+.theme-toggle-container {
+    display: flex;
+    justify-content: flex-end;
+    /* Располагаем кнопку справа */
+    margin: 16px;
+}
+
+.theme-toggle-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-icon {
+    width: 32px;
+    height: 16px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+}
+
+.theme-icon-light {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.theme-icon-dark {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.theme-light .theme-icon-light {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.theme-light .theme-icon-dark {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.theme-dark .theme-icon-light {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.theme-dark .theme-icon-dark {
+    opacity: 1;
+    transform: scale(1);
+}
