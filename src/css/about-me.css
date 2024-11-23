@@ -354,6 +354,7 @@
 .text {
     font-size: 16px;
     text-align: left;
+    font-family: Poppins;
 }
 
 .bio-text-container {
@@ -365,4 +366,58 @@
 .about-section {
     padding-top: 80px;
     padding-bottom: 80px;
+}
+
+
+:root {
+    --main-color: #00b068;
+    --decor-color: #14c57c;
+    --text-color-light: #333;
+    --text-color-dark: #f4f4f4;
+    --bg-light: #fff;
+    --bg-dark: #222;
+}
+
+body.theme-light {
+    --text-color: var(--text-color-light);
+    --background-color: var(--bg-light);
+}
+
+body.theme-dark {
+    --text-color: var(--text-color-dark);
+    --background-color: var(--bg-dark);
+}
+
+.text,
+.bio-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.about-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: var(--background-color);
+}
+
+.education {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 40px;
+    padding: 0 16px;
+}
+
+.education-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 384px;
+}
+
+.decor-element img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
