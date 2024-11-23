@@ -5,28 +5,34 @@ https://medium.com/@haxzie/dark-and-light-theme-switcher-using-css-variables-and
 -- add event listener on the toggle element and add callback function toggleTheme() below
 */
 
+// Устанавливает тему и сохраняет в localStorage
 function setTheme(themeName) {
+  document.body.className = themeName;
   localStorage.setItem('theme', themeName);
-  document.documentElement.className = themeName;
 }
 
-// function to toggle between light and dark theme
+// Переключает тему при клике
 function toggleTheme() {
-  if (localStorage.getItem('theme') === 'theme-dark') {
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'theme-dark') {
     setTheme('theme-light');
   } else {
     setTheme('theme-dark');
   }
 }
 
-// Immediately invoked function to set the theme on initial load
+// Инициализация темы при загрузке страницы
 (function () {
-  if (localStorage.getItem('theme') === 'theme-dark') {
-    setTheme('theme-dark');
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme);
   } else {
-    setTheme('theme-light');
+    setTheme('theme-light'); // Тема по умолчанию
   }
 })();
+
+// Добавляем обработчик клика на кнопку
+document.getElementById('themeToggle').addEventListener('click', toggleTheme);
 
 const burgerBtn = document.querySelector('.burger-btn');
 const modal = document.getElementById('modal');
