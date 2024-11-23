@@ -1,0 +1,104 @@
+@media screen and (min-width: 360px) {
+  .hero {
+    width: 360px;
+    margin-top: 186px;
+    padding-left: 20px;
+    background-color: var(--color-white);
+    background-image: url(../img/background-img.png);
+  }
+  h1 {
+    font-family: 'Impact', sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-green);
+    margin-bottom: 40px;
+  }
+  .greeting {
+    color: var(--color-black);
+  }
+  .order-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 330px;
+    height: 92px;
+    margin-bottom: 40px;
+  }
+  .order-hero {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    z-index: 2;
+    transition: transform 250ms ease-in-out;
+  }
+  .order-container:hover .order-hero {
+    transform: translateX(50%);
+  }
+  .order-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55556;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-black);
+  }
+
+  .rectangle {
+    border-radius: 16px;
+    width: 196px;
+    height: 92px;
+    background-color: var(--color-green-saturated);
+    position: absolute;
+    left: 155px;
+    z-index: 0;
+    transition: background-color 250ms ease-in-out;
+  }
+  .order-container:hover .rectangle {
+    background-color: var(--color-green);
+  }
+  .order-arrow {
+    fill: var(--color-green);
+  }
+  .hero-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55556;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #292929;
+  }
+  .highlight-text {
+    color: #00b068;
+  }
+  .s-m-list-hero {
+    list-style: none;
+    padding: 32px 0px;
+    width: 360px;
+    background-color: var(--color-grey);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    margin-top: 72px;
+  }
+  .s-m-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .s-m-link {
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-black);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+  }
+}
