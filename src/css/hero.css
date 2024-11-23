@@ -70,10 +70,10 @@
     line-height: 1.55556;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #292929;
+    color: var(--color-black);
   }
   .highlight-text {
-    color: #00b068;
+    color: var(--color-green);
   }
   .s-m-list-hero {
     list-style: none;
@@ -90,6 +90,69 @@
   }
   .s-m-item:not(:last-child) {
     margin-bottom: 24px;
+  }
+  .s-m-link {
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-black);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 768px;
+    margin-top: 184px;
+    padding-left: 32px;
+    background-image: url(../img/background-tablet.png);
+  }
+  h1 {
+    font-size: 136px;
+    line-height: 1.14706;
+    letter-spacing: 0.01em;
+    margin-bottom: 60px;
+  }
+  .order-container {
+    width: 426px;
+    height: 96px;
+  }
+
+  .order-link {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .rectangle {
+    width: 261px;
+    height: 96px;
+    left: 151px;
+  }
+  .hero-text {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .s-m-list-hero {
+    list-style: none;
+    padding: 40px 0px;
+    width: 768px;
+    background-color: var(--color-grey);
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    margin-top: 72px;
+  }
+  .s-m-item:not(:last-child) {
+    margin-bottom: 0;
   }
   .s-m-link {
     text-decoration: none;
