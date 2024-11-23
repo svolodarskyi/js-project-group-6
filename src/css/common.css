@@ -19,6 +19,7 @@
     --color-red-error: #E74A3B;
     --color-footer-border-top: var(--color-grey);
     --background-color: var(--color-white);
+    --color-burger-menu: var(--color-black);
 }
 
 .theme-light {
@@ -32,6 +33,7 @@
     --color-red-error: #E74A3B;
     --color-footer-border-top: var(--color-grey);
     --background-color: var(--color-white);
+    --color-burger-menu: var(--color-black);
 }
 
  .theme-dark {
@@ -45,6 +47,7 @@
     --color-red-error: #E74A3B;
     --color-footer-border-top: var(--color-white);
     --background-color: var(--color-black);
+    --color-burger-menu: var(--color-white);
   }
   
 
