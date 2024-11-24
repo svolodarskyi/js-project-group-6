@@ -150,6 +150,7 @@
         width: 336px;
         height: 392px;
         margin-top: 368px;
+        margin-bottom: 0;
     }
 
     .bio-text{
@@ -215,6 +216,7 @@
         width: 384px;
         height: 448px;
         margin-top: 272px;
+        margin-bottom: 0;
     }
 
     .bio-text{
