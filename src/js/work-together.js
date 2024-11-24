@@ -1,4 +1,3 @@
-import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -40,44 +39,65 @@ async function pushMessage(event) {
   const userMail = element.email.value.trim();
   const userComment = element.message.value.trim();
 
-  try {
-    const data = await fetchData(userMail, userComment);
-    // if (data.status === 201) {
-    // const titleNew = data.title;
-    // const messageNew = data.message;
-
-    //   console.log(data);
-    //   openModal(titleNew, messageNew);
-
-    openModal();
-    workForm.reset();
-    succesIcon.style.display = 'none';
-  } catch (error) {
-    iziToast.error({
-      message: 'Error! Please, check your information and try again',
-      position: 'topRight',
+  fetchData(userMail, userComment)
+    .then(({ status, data }) => {
+      if (status !== 201) {
+        wrongMessage();
+        return;
+      }
+      const titleNew = data.title;
+      const messageNew = data.message;
+      openModal(titleNew, messageNew);
+      workForm.reset();
+      succesIcon.style.display = 'none';
+    })
+    .catch(error => {
+      wrongMessage();
+      console.error(error);
     });
-  }
 }
 
 async function fetchData(userMail, userComment) {
-  const response = await axios.post(
-    'https://portfolio-js.b.goit.study/api-docs/requests',
-    {
+  const url = 'https://portfolio-js.b.goit.study/api/requests';
+  return fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
       email: userMail,
       comment: userComment,
+    }),
+  }).then(response => {
+    if (!response.ok) {
+      throw new Error(response.statusText);
     }
-  );
-  return response.data;
+    return response.json().then(data => ({
+      status: response.status,
+      data: data,
+    }));
+  });
 }
 
-function openModal() {
+function wrongMessage() {
+  iziToast.error({
+    message:
+      'Error! All fields must be filled in. Please, check your information and try again',
+    position: 'topRight',
+    backgroundColor: 'red',
+    titleColor: 'white',
+    messageColor: 'white',
+    balloon: true,
+  });
+}
+
+function openModal(title, message) {
   const workOverlay = document.querySelector('.work-together-overlay');
 
-  //   const titleOverlay = document.querySelector('.work-overlay-title');
-  //   const messageOverlay = document.querySelector('.work-overlay-text');
-  //   titleOverlay.textContent = title;
-  //   messageOverlay.textContent = message;
+  const titleOverlay = document.querySelector('.work-overlay-title');
+  const messageOverlay = document.querySelector('.work-overlay-text');
+  titleOverlay.textContent = title;
+  messageOverlay.textContent = message;
 
   workOverlay.classList.add('workOverlay-is-open');
 
@@ -88,6 +108,10 @@ function openModal() {
       (event.type === 'click' && event.target.closest('.close-button'))
     ) {
       closeOverlay();
+      const formBtn = document.querySelector('.work-together-btn');
+      const rootStyles = getComputedStyle(document.documentElement);
+      const colorGreen = rootStyles.getPropertyValue('--color-green').trim();
+      formBtn.style.background = colorGreen;
     }
   };
 
