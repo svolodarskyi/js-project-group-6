@@ -8,11 +8,6 @@
   --projects-text-color: var(--color-black);
 }
 
-.section-projects{
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
 .projects-title {
   font-family: Impact;
   font-weight: 400;
@@ -147,10 +142,6 @@
 
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
-  .section-projects{
-    padding-top: 124px;
-    padding-bottom: 124px;
-  }
   .projects-title {
     font-size: 108px;
     line-height: 1.15;
@@ -192,11 +183,6 @@
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1280px) {
-  .section-projects{
-    padding-top: 164px;
-    padding-bottom: 164px;
-  }
-
   .projects-title {
     margin-bottom: 80px;
     color: var(--heading-main-color)
