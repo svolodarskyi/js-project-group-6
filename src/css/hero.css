@@ -1,12 +1,30 @@
 .section-hero{
   padding-top: 112px;
-
   background-image: url(../img/hero/decor-bg-mob.png);
   background-repeat: no-repeat;
   background-position: top 14px center;
-
 }
 
+.theme-dark{
+  --color-greeting: var(--color-white);
+  --color-hero-text: var(--color-white);
+  --color-social-links: var(--color-white);
+  --color-social-bg: var(--color-grey);
+  --color-cta-text: var(--color-white);
+  --color-cta-button: var(--color-green);
+  --color-cta-button-hover: var(--color-green-hover);
+ 
+}
+
+.theme-light{
+  --color-greeting: var(--color-black);
+  --color-hero-text: var(--color-black);
+  --color-cta-text: var(--color-black);
+  --color-social-links: var(--color-black);
+  --color-social-bg: var(--color-grey);
+  --color-cta-button: var(--color-green);
+  --color-cta-button-hover: var(--color-green-hover);
+}
  
 
 .hero-img{
@@ -19,7 +37,7 @@
     line-height: 1.25;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--color-black);
+    color: var(--color-greeting);
     margin-bottom: 40px;
     z-index: 2;
   }
@@ -56,14 +74,14 @@
     line-height: 1.55556;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--color-black);
+    color: var(--color-cta-text);
   }
 
   .rectangle {
     border-radius: 16px;
     width: 165px;
     height: 92px;
-    background-color: var(--color-green-saturated);
+    background-color: var(--color-cta-button);
     position: absolute;
     left: 155px;
     z-index: 0;
@@ -71,11 +89,11 @@
   }
 
   .order-container:hover .rectangle {
-    background-color: var(--color-green);
+    background-color: var(--color-cta-button-hover);
   }
 
   .order-arrow {
-    fill: var(--color-green);
+    fill: var(--color-cta-button);
   }
   
   .hero-text {
@@ -85,7 +103,7 @@
     line-height: 1.55556;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--color-black);
+    color: var(--color-hero-text);
   }
   .highlight-text {
     color: var(--color-green);
@@ -94,7 +112,7 @@
     list-style: none;
     padding: 32px 0px;
 
-    background-color: var(--color-grey);
+    background-color: var(--color-social-bg);
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -108,7 +126,7 @@
   }
   .s-m-link {
     text-align: center;
-    color: var(--color-black);
+    color: var(--color-social-links);
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 16px;
