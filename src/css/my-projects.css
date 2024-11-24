@@ -34,7 +34,8 @@
 }
 
 .projects-list-item {
-  width: 320px;
+  max-width: 320px;
+  /* width: 320px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -156,7 +157,8 @@
   }
 
   .projects-list-item {
-    width: 704px;
+    max-width: 704px;
+    /* width: 704px; */
   }
 
   .projects-image {
@@ -192,6 +194,7 @@
   }
 
   .projects-list-item {
-    width: 1008px;
+    max-width: 1008px;
+    /* width: 1008px; */
   }
 }
