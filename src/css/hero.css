@@ -85,16 +85,31 @@
     left: 135px;
     z-index: 0;
     transition: background-color 250ms ease-in-out;
+    
   }
 
   .order-container:hover .rectangle {
     background-color: var(--color-cta-button-hover);
+    
   }
 
   .order-arrow {
     fill: var(--color-cta-button);
   }
-  
+  /* начать здесь */
+    .order-container:hover{
+      transform: translateX(-15%);
+    }
+.order-container:hover .order-hero {
+  transform: translateX(43%);
+
+}
+.order-container:hover .rectangle {
+  width: 200px;
+  transition: transform 250ms ease-in-out;
+}
+/* закончить здесь */
+
   .hero-text {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -165,11 +180,24 @@
     font-size: 20px;
     line-height: 1.6;
   }
+/* начать здесь */
 
-  .order-container:hover .order-hero {
+    .order-container:hover {
+      transform: 0;
+    }
+  
+    .order-container:hover .order-hero {
+      transform: translateX(50%);
+  
+    }
+  
+    .order-container:hover .rectangle {
+      width: 261px;
+    }
+  /* .order-container:hover .order-hero {
     transform: translateX(50%);
-  }
-
+  } */
+/* закончить тут */
   .rectangle {
     width: 261px;
     height: 96px;
