@@ -83,7 +83,7 @@
     height: 92px;
     background-color: var(--color-cta-button);
     position: absolute;
-    left: 155px;
+    left: 135px;
     z-index: 0;
     transition: background-color 250ms ease-in-out;
   }
