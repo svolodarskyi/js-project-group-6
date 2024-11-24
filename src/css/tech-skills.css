@@ -1,7 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
+  font-weight: 500;
+  font-family: var(--font-text);
+  background-color: var(--color-white);
 }
 
 .tech-skills {
@@ -29,25 +30,29 @@ body {
 }
 
 .straight {
-  background-color: #e0f7fa;
 }
 
 .tilted {
-  background-color: #e0f7fa;
   transform: rotate(2deg);
 }
 
 .marquee {
   overflow: hidden;
-  background-color: #bcdfd1;
+  background-color: var(--color-green-saturated);
 }
 .marquee-second {
   overflow: hidden;
-  background-color: #e4e5e6;
+  background-color: var(--color-grey);
 }
 
 .marquee-inner {
   display: flex;
+}
+.marquee-line-list {
+  display: flex;
+  gap: 20px;
+}
+.marquee-line-item {
 }
 
 .marquee-line {
@@ -55,11 +60,11 @@ body {
   margin: 0;
   padding: 32px 0px;
   width: 1392px;
-  color: #292929;
-  font-weight: 500;
+  color: var(--color-black);
   font-size: 32px;
   line-height: 125%;
   letter-spacing: 0.02em;
+  gap: 54px;
   text-transform: uppercase;
   white-space: nowrap;
   animation-name: scroll;
@@ -67,23 +72,10 @@ body {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-.marquee-line-second {
-  flex-shrink: 0;
-  margin: 0;
-  font-weight: 500;
-  padding: 32px 0px;
-  width: 1392px;
-  color: #00b068;
-  font-size: 32px;
-  line-height: 125%;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  animation-name: scroll;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+.second {
+  color: var(--color-green);
 }
+
 @keyframes scroll {
   from {
     transform: translateX(0);
