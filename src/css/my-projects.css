@@ -1,0 +1,211 @@
+.theme-dark{
+  --heading-main-color: var(--color-white);
+  --projects-text-color: var(--color-white);
+}
+
+.theme-light{
+  --heading-main-color: var(--color-black);
+  --projects-text-color: var(--color-black);
+}
+
+.section-projects{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.projects-title {
+  font-family: Impact;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--heading-main-color)
+
+}
+
+.projects-title span {
+  color: var(--color-green);
+  margin-left: 16px;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.projects-list-item {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.projects-image {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.projects-item-skills {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--projects-text-color);
+  margin-bottom: 16px;
+}
+
+.project-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-item-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  color: var(--projects-text-color);
+}
+
+.projects-item-btn {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  /* width: 125px;
+  height: 48px; */
+
+  padding: 12px 24px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--projects-text-color);
+  background: var(--color-grey);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.projects-item-btn:hover {
+  background-color: var(--color-grey-hover);
+}
+
+.projects-item-btn .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.projects-load-btn {
+  position: relative;
+  border: none;
+
+  display: block;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 0;
+  cursor: pointer;
+
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  background-color: transparent;
+  color: var(--projects-text-color);
+  
+}
+
+.projects-load-btn:hover {
+  color: var(--color-green);
+}
+
+.projects-load-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-green);
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .section-projects{
+    padding-top: 124px;
+    padding-bottom: 124px;
+  }
+  .projects-title {
+    font-size: 108px;
+    line-height: 1.15;
+    margin-bottom: 60px;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+    color: var(--heading-main-color);
+  }
+
+  .projects-list {
+    gap: 60px;
+  }
+
+  .projects-list-item {
+    width: 704px;
+  }
+
+  .projects-image {
+    margin-bottom: 16px;
+  }
+
+  .projects-item-skills {
+    margin-bottom: 20px;
+  }
+
+  .project-item-content {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  .projects-item-title {
+    font-size: 36px;
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+    margin-bottom: 0;
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1280px) {
+  .section-projects{
+    padding-top: 164px;
+    padding-bottom: 164px;
+  }
+
+  .projects-title {
+    margin-bottom: 80px;
+    color: var(--heading-main-color)
+  }
+  .projects-list {
+    gap: 80px;
+  }
+
+  .projects-list-item {
+    width: 1008px;
+  }
+}
