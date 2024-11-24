@@ -5,7 +5,7 @@ console.log('lalala');
 const projectsList = document.querySelector('.projects-list');
 const loadMoreBtn = document.querySelector('.projects-load-btn');
 
-let startIndex = 0;
+let startIndex = 3;
 const projectsPerPage = 3;
 
 const allProjects = Array.from(
@@ -31,9 +31,13 @@ const loadMoreProjects = () => {
     loadMoreBtn.style.display = 'none';
   }
 
+  const card = document.querySelector(".projects-image");
+  const cardHeight = card.getBoundingClientRect().height;
+
   setTimeout(() => {
     window.scrollBy({
-      top: 300,
+      left: 0,
+      top: cardHeight,
       behavior: 'smooth',
     });
   }, 100);
