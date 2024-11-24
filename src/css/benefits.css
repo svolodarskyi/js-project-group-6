@@ -6,8 +6,9 @@
     --text-main-color: var(--color-white);
 }
 
-.benefits{
-    margin-top: 80px;
+.benefits-section{
+    padding-top: 80px;
+    
     }
    
     .benefits-title{
@@ -82,9 +83,9 @@
     }
    
     @media screen and (min-width: 768px){
-   
-        .container {
-                max-width: 768px;
+        .benefits-section{
+            padding-top: 124px;
+            
             }
         .benefits-title{
             font-size: 108px;
@@ -120,13 +121,24 @@
     }
    
     @media only screen and (min-width: 1280px) {
-        .container {
+        .benefits-section{
+            padding-top: 164px;
             max-width: 1280px;
-        }
+            background-image: url(../img/benefits/benefits-decor-bg-desktop.png);
+            background-repeat: no-repeat;
+            background-position: top 50px right 32px;
+            margin: 0 auto;
+            
+            }
+
+        .benefits.section{
+            
+        }    
    
         .benefits-title{
-            max-width: 56%;
+            max-width: 700px;
             margin-bottom: -96px;
+            
         }
     .benefits-c {
    
