@@ -1,56 +1,56 @@
 @font-face {
-    font-family: "Impact";
-    src: url('../../assets/fonts/impact.ttf') format("truetype");
+  font-family: "Impact";
+  src: url('../../assets/fonts/impact.ttf') format("truetype");
 }
 
-:root{
-    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    --font-text: "Poppins", sans-serif;
-    --font-section-header: "Impact", sans-serif;
+:root {
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --font-text: "Poppins", sans-serif;
+  --font-section-header: "Impact", sans-serif;
 
-    /* Default variables (identical to theme-light ) */
-    --color-black: #292929;
-    --color-green: #00B068;
-    --color-green-saturated: #BCDFD1;
-    --color-green-hover: #009156;
-    --color-white: #F0F0F0;
-    --color-grey: #E4E5E6;
-    --color-grey-hover: #BBBBBB;
-    --color-red-error: #E74A3B;
-    --color-footer-border-top: var(--color-grey);
-    --background-color: var(--color-white);
-    --color-burger-menu: var(--color-black);
+  /* Default variables (identical to theme-light ) */
+  --color-black: #292929;
+  --color-green: #00B068;
+  --color-green-saturated: #BCDFD1;
+  --color-green-hover: #009156;
+  --color-white: #F0F0F0;
+  --color-grey: #E4E5E6;
+  --color-grey-hover: #BBBBBB;
+  --color-red-error: #E74A3B;
+  --color-footer-border-top: var(--color-grey);
+  --background-color: var(--color-white);
+  --color-burger-menu: var(--color-black);
 }
 
 .theme-light {
-    --color-black: #292929;
-    --color-green: #00B068;
-    --color-green-saturated: #BCDFD1;
-    --color-green-hover: #009156  ;
-    --color-white: #F0F0F0;
-    --color-grey: #E4E5E6;
-    --color-grey-hover: #BBBBBB;
-    --color-red-error: #E74A3B;
-    --color-footer-border-top: var(--color-grey);
-    --background-color: var(--color-white);
-    --color-burger-menu: var(--color-black);
+  --color-black: #292929;
+  --color-green: #00B068;
+  --color-green-saturated: #BCDFD1;
+  --color-green-hover: #009156;
+  --color-white: #F0F0F0;
+  --color-grey: #E4E5E6;
+  --color-grey-hover: #BBBBBB;
+  --color-red-error: #E74A3B;
+  --color-footer-border-top: var(--color-grey);
+  --background-color: var(--color-white);
+  --color-burger-menu: var(--color-black);
 }
 
- .theme-dark {
-    --color-black: #1E2023;
-    --color-green: #14C57C;
-    --color-green-saturated: #204136;
-    --color-green-hover: #009156;
-    --color-white: #F0F0F0;
-    --color-grey: #2A2D32;
-    --color-grey-hover: #3B3F45;
-    --color-red-error: #E74A3B;
-    --color-footer-border-top: var(--color-white);
-    --background-color: var(--color-black);
-    --color-burger-menu: var(--color-white);
-  }
-  
+.theme-dark {
+  --color-black: #1E2023;
+  --color-green: #14C57C;
+  --color-green-saturated: #204136;
+  --color-green-hover: #009156;
+  --color-white: #F0F0F0;
+  --color-grey: #2A2D32;
+  --color-grey-hover: #3B3F45;
+  --color-red-error: #E74A3B;
+  --color-footer-border-top: var(--color-white);
+  --background-color: var(--color-black);
+  --color-burger-menu: var(--color-white);
+}
 
-  body{
-    background-color: var(--background-color);
-  }
+
+body {
+  background-color: var(--background-color);
+}

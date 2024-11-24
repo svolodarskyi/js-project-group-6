@@ -5,53 +5,47 @@ https://medium.com/@haxzie/dark-and-light-theme-switcher-using-css-variables-and
 -- add event listener on the toggle element and add callback function toggleTheme() below
 */
 
-// Устанавливает тему и сохраняет в localStorage
+function toggleModalContentVisibility(themeName) {
+  const modalContent = document.querySelector('.dynamic-content');
+  if (themeName === 'theme-dark') {
+    modalContent.style.display = 'flex';
+  } else {
+    modalContent.style.display = 'none';
+  }
+}
+
 function setTheme(themeName) {
   document.body.className = themeName;
   localStorage.setItem('theme', themeName);
+
+  toggleModalContentVisibility(themeName);
 }
 
-// Переключает тему при клике
-function toggleTheme() {
-  const currentTheme = localStorage.getItem('theme');
-  if (currentTheme === 'theme-dark') {
-    setTheme('theme-light');
-  } else {
-    setTheme('theme-dark');
-  }
-}
-
-// Инициализация темы при загрузке страницы
 (function () {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    setTheme(savedTheme);
-  } else {
-    setTheme('theme-light'); // Тема по умолчанию
-  }
+  const savedTheme = localStorage.getItem('theme') || 'theme-light';
+  setTheme(savedTheme);
 })();
-
-// Добавляем обработчик клика на кнопку
-document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const currentTheme = localStorage.getItem('theme');
+  const newTheme = currentTheme === 'theme-dark' ? 'theme-light' : 'theme-dark';
+  setTheme(newTheme);
+});
 
 const burgerBtn = document.querySelector('.burger-btn');
 const modal = document.getElementById('modal');
 const modalContainer = modal.querySelector('.modal-container');
 const closeBtn = document.getElementById('close-btn');
 
-// Открытие модалки
 burgerBtn.addEventListener('click', () => {
   modal.classList.add('active');
   modalContainer.classList.add('active');
 });
 
-// Закрытие модалки
 closeBtn.addEventListener('click', () => {
   modal.classList.remove('active');
   modalContainer.classList.remove('active');
 });
 
-// Закрытие при клике вне модалки
 window.addEventListener('click', e => {
   if (e.target === modal) {
     modal.classList.remove('active');
