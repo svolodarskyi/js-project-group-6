@@ -1,0 +1,252 @@
+:root {
+    --main-color: #00b068;
+    --decor-color: #14c57c;
+    --text-color-light: #333;
+    --text-color-dark: #f4f4f4;
+    --bg-light: #fff;
+    --bg-dark: #222;
+}
+
+.theme-light {
+    --text-color: var(--text-color-light);
+    --background-color: var(--bg-light);
+    --subtitle-color: var(--color-black)
+}
+
+.theme-dark {
+    --text-color: var(--text-color-dark);
+    --background-color: var(--bg-dark);
+    --subtitle-color: var(--color-white)
+}
+
+.about-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: var(--background-color);
+}
+
+.about-section-header {
+    font-family: "Impact", sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+
+    line-height: 1.23077;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 40px;
+    color: var(--subtitle-color);
+}
+
+
+.about-section-header-accent {
+    color: var(--color-green);
+}
+
+.img-man-about{
+    width: 320px;
+    height: 374px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    
+}
+
+.bio-text{
+    width: 320px;
+}
+
+.text-gap {
+    margin-bottom: 24px;
+}
+
+.sub-title {
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 32px;
+    font-size: 32px;
+    color: var(--subtitle-color);
+} 
+
+.education-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.education-list li {
+    position: relative;
+    line-height: 1.5;
+    padding-left: 18px;
+}
+
+.education-list li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background-color: #00b068;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    transform: translateY(0);
+}
+
+.text,
+.bio-text {
+    color: var(--text-color);
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-align: left;
+
+}
+
+.bio-attachment{
+    margin-bottom: 40px;
+}
+
+.education {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .about-section {
+        padding-top: 124px;
+        padding-bottom: 124px;
+    }
+
+    .section-container {
+        padding-left: 32px;
+        padding-right: 32px;
+        
+    }
+
+    .section-container{
+        background-image: url(../img/about-me-img/decor-bg-tab.png);
+        background-repeat: no-repeat;
+        background-position: bottom 155px right 32px;
+    }
+
+    .about-section-header  {
+        font-size: 108px;
+        line-height: 1.14815;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    .bio-attachment {
+      display: flex;
+       gap: 32px; 
+       justify-content: flex-end;
+       margin-bottom: 60px;
+    }
+
+    .img-man-about {
+        width: 336px;
+        height: 392px;
+        margin-top: 368px;
+    }
+
+    .bio-text{
+        width: 336px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+
+        /* line-height: 24px; */ 
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+    }
+
+    .sub-title {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 36px;
+
+        /* line-height: 48px; */ 
+        line-height: 1.33333;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+    }
+
+    
+    .education{
+        display: flex;
+        gap: 32px;
+ 
+    }
+    
+    .education-list {
+        list-style: none;
+        word-wrap: break-word;
+        max-width: 332px;
+        gap: 16px;
+    }
+  
+}
+
+
+@media screen and (min-width: 1280px) {
+    .about-section {
+        padding-top: 164px;
+        padding-bottom: 164px;
+    }
+
+    .section-container{
+        background-image: url(../img/about-me-img/decor-ab.png);
+        background-repeat: no-repeat;
+        background-position: bottom 250px right 32px;
+    }
+
+    .bio-attachment {
+      display: flex;
+       gap: 136px; 
+       justify-content: flex-end;
+       margin-bottom: 80px;
+    }
+
+    .img-man-about {
+        width: 384px;
+        height: 448px;
+        margin-top: 272px;
+    }
+
+    .bio-text{
+        width: 488px;
+    }
+
+   
+    .education{
+        display: flex;
+        gap: 136px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .education-school{
+        width: 384px;
+        position: relative;
+        left: -28px;
+    }
+
+    .education-list {
+        max-width: 384px;
+        gap: 16px;
+    }
+    .education-technology{
+        position: relative;
+        left: -28px;
+    }
+}
+
+
