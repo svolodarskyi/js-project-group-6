@@ -63,9 +63,7 @@
     transition: transform 250ms ease-in-out;
   }
 
-  .order-container:hover .order-hero {
-    transform: translateX(50%);
-  }
+ 
 
   .order-link {
     font-family: 'Poppins', sans-serif;
@@ -166,6 +164,11 @@
     font-size: 20px;
     line-height: 1.6;
   }
+
+  .order-container:hover .order-hero {
+    transform: translateX(50%);
+  }
+
   .rectangle {
     width: 261px;
     height: 96px;
