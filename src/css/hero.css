@@ -76,6 +76,7 @@
   }
 
   .rectangle {
+    cursor: pointer;
     border-radius: 16px;
     width: 165px;
     height: 92px;
