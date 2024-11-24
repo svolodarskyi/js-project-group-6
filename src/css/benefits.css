@@ -1,3 +1,11 @@
+.theme-light{
+    --text-main-color: var(--color-black);
+} 
+
+.theme-dark{
+    --text-main-color: var(--color-white);
+}
+
 .benefits{
     margin-top: 80px;
     }
@@ -9,7 +17,7 @@
         line-height: 123%;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        color: var(--color-black);
+        color: var(--text-main-color);
         margin-bottom: 40px;
     }
     .benefits-s{
@@ -24,7 +32,8 @@
         margin-bottom: 16px;
     }
     .mob-icon{
-        border: 1px solid black;
+        stroke: var(--color-green);
+        fill: none;
         position: absolute;
         left: 25%;
         top: 25%;
@@ -36,7 +45,7 @@
         line-height: 156%;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        color: var(--color-black);
+        color: var(--text-main-color);
         margin-bottom: 16px;
     }
     .benefits-list-item {
@@ -45,7 +54,7 @@
         font-size: 16px;
         line-height: 150%;
         letter-spacing: 0.03em;
-        color: var(--color-black);
+        color: var(--text-main-color);
    
     }
     .benefits-c p:last-child{
