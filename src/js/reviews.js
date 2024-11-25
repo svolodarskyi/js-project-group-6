@@ -1,22 +1,22 @@
-// import function to register Swiper custom elements
+// Import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
-// Описаний у документації
+// Additional imports
 import iziToast from 'izitoast';
-// Додатковий імпорт стилів
 import 'izitoast/dist/css/iziToast.min.css';
 
 register();
 
 const reviewsEl = document.querySelector('.reviews-container');
+let swiper;
 
 const createReviewsCard = cardInfo => {
   return `
     <li class="swiper-slide" id="slide">
         <p class="user-comment">${cardInfo.review}</p>
         <div class="user-info">
-          <img class="user-photo" src="${cardInfo.avatarUrl}" alt="User photo" width="40" height="40" />
+          <img class="user-photo" src="${cardInfo.avatar_url}" alt="User photo" width="40" height="40" />
           <h4 class="user-name">${cardInfo.author}</h4>
         </div>
     </li>`;
@@ -24,9 +24,7 @@ const createReviewsCard = cardInfo => {
 
 const fetchReviews = async () => {
   try {
-    const response = await fetch(
-      'https://portfolio-js.b.goit.study/api/reviews'
-    );
+    const response = await fetch('https://portfolio-js.b.goit.study/api/reviews');
     if (!response.ok) {
       throw new Error(`HTTP Error: ${response.status}`);
     }
@@ -46,7 +44,7 @@ const initReviewsSwiper = async () => {
       message: 'Reviews cannot be loaded at this time.',
       position: 'bottomRight',
     });
-    // return alert('Reviews cannot be loaded at this time.');
+    return;
   }
 
   const reviewsListHTML = reviewsData
@@ -54,9 +52,9 @@ const initReviewsSwiper = async () => {
     .join('');
   reviewsEl.querySelector('.swiper-wrapper').innerHTML = reviewsListHTML;
 
-  new Swiper('.swiper', {
+  // Initialize the swiper instance
+  swiper = new Swiper('.swiper', {
     slidesPerView: 1,
-    // direction: 'horizontal',
     keyboard: {
       enabled: true,
     },
@@ -67,16 +65,59 @@ const initReviewsSwiper = async () => {
       nextEl: '.swiper-btn-next',
       prevEl: '.swiper-btn-back',
     },
-
     breakpoints: {
       768: {
         slidesPerView: 1,
       },
       1280: {
         slidesPerView: 2,
+        spaceBetween: 32,
+      },
+    },
+    on: {
+      slideChange: () => {
+        chnageBtnState();
       },
     },
   });
+
+  chnageBtnState(); // 
 };
 
+function chnageBtnState() {
+  if (!swiper) return; // 
+
+  const nextBtn = document.querySelector('.swiper-btn-next');
+  const prevBtn = document.querySelector('.swiper-btn-back');
+
+  nextBtn.disabled = swiper.isEnd;
+  prevBtn.disabled = swiper.isBeginning;
+
+  const backIcon = document.querySelector('.icon-btn-back');
+  const nextIcon = document.querySelector('.icon-btn-next');
+
+  backIcon.style.transition = 'none';
+  nextIcon.style.transition = 'none';
+
+  
+
+  if (swiper.isEnd) {
+    nextIcon.style.stroke = 'var(--color-grey)';
+    backIcon.style.stroke = 'var(--text-main-color)';
+  } 
+  if (swiper.isBeginning) {
+    backIcon.style.stroke = 'var(--color-grey)';
+    nextIcon.style.stroke = 'var(--text-main-color)';
+  }
+
+  if (!swiper.isEnd && !swiper.isBeginning ){
+    backIcon.style.stroke = 'var(--text-main-color)';
+    nextIcon.style.stroke = 'var(--text-main-color)';
+  }
+
+  nextBtn.classList.toggle('disabled', swiper.isEnd);
+  prevBtn.classList.toggle('disabled', swiper.isBeginning);
+}
+
+// Initialize the reviews swiper
 initReviewsSwiper();
