@@ -22,8 +22,8 @@
   --color-cta-text: var(--color-black);
   --color-social-links: var(--color-black);
   --color-social-bg: var(--color-grey);
-  --color-cta-button: var(--color-green);
-  --color-cta-button-hover: var(--color-green-hover);
+  --color-cta-button: var(--color-green-saturated);
+  --color-cta-button-hover: var(--color-green);
 }
  
 
@@ -44,6 +44,7 @@
 
   .greeting-accent{
     color: var(--color-green);
+    font-size: 62px;
   }
 
   .order-container {
@@ -82,12 +83,20 @@
     height: 92px;
     background-color: var(--color-cta-button);
     position: absolute;
-    left: 135px;
+    left: 115px;
     z-index: 0;
     transition: background-color 250ms ease-in-out;
   }
 
   .order-container:hover .rectangle {
+    background-color: var(--color-cta-button-hover);
+  }
+
+.order-container:active .order-hero {
+    transform: translateX(50%);
+  }
+
+  .order-container:active .rectangle {
     background-color: var(--color-cta-button-hover);
   }
 
@@ -131,7 +140,39 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
+    transition: transform 0.2s ease-in-out;
   }
+
+.s-m-link:hover,
+:active {
+    color: var(--color-green-hover);
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-2px, 2px);
+    }
+
+    50% {
+        transform: translate(2px, -2px);
+    }
+
+    75% {
+        transform: translate(-2px, -2px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.vibrate {
+    animation: vibrate 0.3s ease-in-out;
+}
 
 
 @media screen and (min-width: 768px) {
@@ -145,7 +186,7 @@
     
   }
 
- .container{
+   .container{
     padding: 0 32px;
   }
 
@@ -154,6 +195,10 @@
     line-height: 1.14706;
     letter-spacing: 0.01em;
     margin-bottom: 60px;
+  }
+
+  .greeting-accent{
+    font-size: 136px;
   }
 
   .order-container {
@@ -213,6 +258,10 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
     margin-bottom: 80px;
+  }
+
+  .greeting-accent{
+    font-size: 124px;
   }
 
   .hero-img{

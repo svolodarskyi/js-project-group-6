@@ -6,24 +6,39 @@ https://medium.com/@haxzie/dark-and-light-theme-switcher-using-css-variables-and
 */
 
 function setTheme(themeName) {
-    localStorage.setItem('theme', themeName);
-    document.documentElement.className = themeName;
+  document.body.className = themeName;
+  localStorage.setItem('theme', themeName);
 }
 
-// function to toggle between light and dark theme
-function toggleTheme() {
-    if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-light');
-    } else {
-        setTheme('theme-dark');
-    }
-}
-
-// Immediately invoked function to set the theme on initial load
 (function () {
-    if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-dark');
-    } else {
-        setTheme('theme-light');
-    }
+  const savedTheme = localStorage.getItem('theme') || 'theme-light';
+  setTheme(savedTheme);
 })();
+
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const currentTheme = localStorage.getItem('theme');
+  const newTheme = currentTheme === 'theme-dark' ? 'theme-light' : 'theme-dark';
+  setTheme(newTheme);
+});
+
+const burgerBtn = document.querySelector('.burger-btn');
+const modal = document.getElementById('modal');
+const modalContainer = modal.querySelector('.modal-container');
+const closeBtn = document.getElementById('close-btn');
+
+burgerBtn.addEventListener('click', () => {
+  modal.classList.add('active');
+  modalContainer.classList.add('active');
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+  modalContainer.classList.remove('active');
+});
+
+window.addEventListener('click', e => {
+  if (e.target === modal) {
+    modal.classList.remove('active');
+    modalContainer.classList.remove('active');
+  }
+});
