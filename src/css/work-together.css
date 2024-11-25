@@ -1,0 +1,410 @@
+.theme-light{
+  --color-text: var(--color-black);
+  --modal-background: var(--color-white);
+}
+
+.theme-dark{
+  --color-text: var(--color-white);
+  --modal-background: var(--color-grey);
+}
+
+
+
+
+.work-together {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.work-together .title {
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: var(--color-text);
+}
+.work-together .title-span {
+  color: var(--color-green);
+}
+
+.work-together-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  color: var(--color-text);
+}
+.work-together .address {
+  margin-bottom: 40px;
+}
+
+.address-list-item {
+  position: relative;
+}
+.address-list-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.address-list-item:hover .link-span {
+  color: var(--color-green);
+}
+
+.work-together .link-span {
+  margin-left: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  font-style: normal;
+  color: var(--color-text);
+  transition: color 250ms cubic-bezier(0.31, 0.7, 0.83, 0.67);
+}
+
+.work-together .address-icon {
+  stroke: var(--color-green);
+  fill: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 2s cubic-bezier(0.31, 0.7, 0.83, 0.67);
+}
+
+@keyframes swing {
+  20% {
+    transform: translateY(-50%) rotate(20deg);
+  }
+  40% {
+    transform: translateY(-50%) rotate(-15deg);
+  }
+  60% {
+    transform: translateY(-50%) rotate(10deg);
+  }
+  80% {
+    transform: translateY(-50%) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+}
+
+.address-list-item:hover .address-icon {
+  animation: swing 2s cubic-bezier(0.31, 0.7, 0.83, 0.67);
+}
+
+.work-together-form input,
+.work-together-form textarea {
+  display: block;
+  font-family: inherit;
+  background-color: var(--color-grey);
+  outline: transparent;
+  border-radius: 8px;
+  padding: 16px;
+  border: none;
+  margin-bottom: 32px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+
+.work-together-form input::placeholder,
+.work-together-form textarea::placeholder {
+  color: var(--color-text);
+}
+
+.work-together-input {
+  width: 100%;
+  height: 48px;
+  color: var(--color-text);
+}
+
+.work-together-input:-webkit-autofill {
+  background-color: var(--color-grey) !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--color-grey) inset !important;
+  -webkit-text-fill-color: var(--color-text) !important;
+  color: var(--color-text);
+}
+
+.input-wrap {
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--color-green);
+  right: 16px;
+}
+.wrong-message {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: var(--color-red-error);
+  top: 100%;
+  margin-top: 4px;
+}
+
+.work-together-com {
+  resize: none;
+  width: 100%;
+  height: 128px;
+}
+.work-together-btn {
+  display: block;
+  border-radius: 8px;
+  padding: 12px 24px;
+  width: 100%;
+  height: 48px;
+  background: var(--color-green);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-white);
+  border: none;
+  outline: none;
+  transition: background-color 250ms cubic-bezier(0.31, 0.7, 0.83, 0.67),
+    transform 1s cubic-bezier(0.31, 0.7, 0.83, 0.67);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.work-together-btn:hover,
+.work-together-btn:focus {
+  border: none;
+  background-color: var(--color-green-hover);
+  animation: pulse 1s cubic-bezier(0.31, 0.7, 0.83, 0.67);
+}
+
+.work-together-overlay {
+  position: fixed;
+  background: linear-gradient(rgba(41, 41, 41, 0.8), rgba(41, 41, 41, 0.8));
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.31, 0.7, 0.83, 0.67),
+    visibility 250ms cubic-bezier(0.31, 0.7, 0.83, 0.67);
+}
+
+.workOverlay-is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.message-form {
+  position: absolute;
+  width: 320px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  padding: 48px 32px;
+  background: var(--modal-background);
+  transition: transform 250ms cubic-bezier(0.31, 0.7, 0.83, 0.67);
+}
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+.menu-close-btn-icon {
+  stroke: var(--color-text);
+}
+
+.work-overlay-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-green);
+  margin-bottom: 16px;
+}
+.work-overlay-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--color-text);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .work-together .address {
+    margin-bottom: 60px;
+  }
+
+  .bg-wrap {
+    position: relative;
+    overflow: visible;
+  }
+
+  .bg-wrap::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    height: 260px;
+    width: 100%;
+    background-position: right top;
+    background-size: 336px 260px;
+    background-repeat: no-repeat;
+    background-image: url(../img/work-together/decor-bg-4-tablet.png);
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .bg-wrap::before {
+      background-size: 336px 260px;
+      background-image: url(../img/work-together/decor-bg-4-tablet-2x.png);
+    }
+  }
+
+  .work-together-text {
+    width: 600px;
+  }
+
+  .work-together .address-list {
+    display: flex;
+    gap: 16px;
+  }
+  .address-list-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .work-together {
+    padding-top: 124px;
+    padding-bottom: 124px;
+  }
+
+  .work-together .container {
+    padding: 0 32px;
+  }
+
+  .work-together .title {
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    margin-bottom: 60px;
+  }
+
+  .work-together-text {
+    font-size: 20px;
+  }
+
+  .work-together-input,
+  .work-together-com {
+    width: 704px;
+    color: var(--color-text);
+  }
+
+  .work-together-btn {
+    width: 173px;
+  }
+
+  .message-form {
+    padding: 64px;
+    width: 492px;
+  }
+  .close-button {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .work-together {
+    padding-top: 164px;
+    padding-bottom: 164px;
+  }
+
+  .bg-wrap {
+    position: relative;
+    overflow: visible;
+  }
+
+  .bg-wrap::before {
+    content: '';
+    position: absolute;
+    top: -166px;
+    width: 100%;
+    height: 526px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 526px 408px;
+    background-image: url(../img/work-together/decor-bg-4-desktop.png);
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .bg-wrap::before {
+      background-size: 526px 408px;
+      background-image: url(../img/work-together/decor-bg-4-desktop-2x.png);
+    }
+  }
+
+  .work-together .title {
+    width: 520px;
+    margin-bottom: 80px;
+  }
+  .work-together-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .work-together-part {
+    width: 488px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .work-together-text,
+  .work-together .address {
+    margin-bottom: 0;
+  }
+
+  .work-together-input,
+  .work-together-com {
+    width: 592px;
+    color: var(--color-text);
+  }
+}

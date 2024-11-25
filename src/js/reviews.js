@@ -13,10 +13,10 @@ const reviewsEl = document.querySelector('.reviews-container');
 
 const createReviewsCard = cardInfo => {
   return `
-    <li class="swiper-slide">
+    <li class="swiper-slide" id="slide">
         <p class="user-comment">${cardInfo.review}</p>
         <div class="user-info">
-          <img class="user-photo" src="${cardInfo.avatar_url}" alt="User photo" width="40" height="40" />
+          <img class="user-photo" src="${cardInfo.avatarUrl}" alt="User photo" width="40" height="40" />
           <h4 class="user-name">${cardInfo.author}</h4>
         </div>
     </li>`;
