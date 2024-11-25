@@ -12,6 +12,7 @@
 
 .section-faq{
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .faq-title {
@@ -103,6 +104,7 @@ img {
 @media only screen and (min-width: 768px) {
   .section-faq{
     padding-top: 124px;
+    padding-bottom: 124px;
   }
 
   .faq-title {
@@ -144,6 +146,7 @@ img {
 
   .section-faq{
     padding-top: 164px;
+    padding-bottom: 164px;
   }
 
 
