@@ -14,4 +14,3 @@ const accordion = new Accordion('.faq-list', {
   // panelClass: 'faq-list-item-title',
   activeClass: 'is-Active-faq-list-item',
 });
-console.log(accordion.onlyChildNodes);
