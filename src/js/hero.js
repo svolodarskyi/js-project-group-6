@@ -9,3 +9,18 @@ cta.addEventListener('click', (event)=>{
         }
       }
 })
+
+
+const socialLinks = document.querySelectorAll('.s-m-item');
+
+
+const addVibrationEffect = (link) => {
+    link.classList.add('vibrate'); 
+    setTimeout(() => {
+        link.classList.remove('vibrate');
+    }, 300);
+};
+
+socialLinks.forEach((link) => {
+    link.addEventListener('mouseenter', () => addVibrationEffect(link));
+});

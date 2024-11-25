@@ -45,6 +45,7 @@
     font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.5px;
+     width: 350px;
 }
 
 .rotate-right {
@@ -128,6 +129,10 @@
 @media only screen and (min-width: 768px) {
     .tech-skills-section{
         padding-bottom: 124px;
+    }
+
+  .wrapper{
+        width: 100%;
     }
   }
   
