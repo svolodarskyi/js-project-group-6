@@ -1,41 +1,40 @@
 .section-titel {
-  font-family: Impact;
-  font-size: 52 px;
-  letter-spacing: 1.8 px;
-  line-height: 64 px;
+  font-family: Impact, sans-serif;
+  font-size: 52px;
+  letter-spacing: 1.8px;
+  line-height: 64px;
   text-align: center;
   margin-bottom: 40px;
+  color: black;
 }
 
 .swiper-wrapper {
-  /* padding: 0 20px; */
-  display: flex;
-  align-items: center;
-  gap: 24px 0px;
+  margin-bottom: 24px;
 }
 
-#slide {
+.swiper-wrapper .swiper-slide {
   width: 320px;
   height: 296px;
   align-items: center;
   border-radius: 16px;
   padding: 32px;
   background-color: var(--color-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.user-comment {
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 24px;
 }
 
-/* .swiper-slide {
-  width: 320px;
-  border-radius: 16px;
-  padding: 32px;
-  background-color: var(--color-grey);
-} */
-
 .user-info {
-  width: 320px;
+  width: 256px;
   display: flex;
   align-items: center;
   column-gap: 8px;
-  margin-top: 24px;
 }
 
 .user-photo {
@@ -44,12 +43,6 @@
 }
 
 .scroll-btns {
-  width: 320px;
-
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 24px;
-  margin-bottom: 80px;
   display: flex;
   justify-content: end;
   gap: 24px;
@@ -72,17 +65,25 @@
 
 @media screen and (min-width: 768px) {
   .section-titel {
-    font-family: var(--font-section-header);
-    font-size: 108 px;
-    letter-spacing: 1.8 px;
-    line-height: 124 px;
+    font-size: 108px;
+    letter-spacing: 1.8px;
+    line-height: 124px;
   }
 
-  .swiper-slide {
-    width: 704px;
+  #slide {
+    width: 640px;
     height: 224px;
     border-radius: 16px;
-    padding: 32px;
+  }
+
+  /* .swiper-wrapper .swiper-slide {
+    width: 640px;
+    height: 224px;
+    border-radius: 16px;
+  } */
+
+  .user-info {
+    width: 680px;
   }
 
   .scroll-btns {
@@ -91,21 +92,18 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .section-titel {
-    font-size: 108 px;
-    line-height: 124 px;
+  .reviews-container .section-titel {
+    font-size: 108px;
+    line-height: 124px;
   }
   .swiper-wrapper {
-    padding: 32px;
     flex-direction: row;
-    gap: 0 36px;
   }
 
-  .swiper-slide {
-    width: 592px !important;
+  .user-info {
+    width: 528px;
   }
-
   .scroll-btns {
-    width: 1240px;
+    width: 1280px;
   }
 }
