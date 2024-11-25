@@ -53,7 +53,6 @@ async function pushMessage(event) {
     })
     .catch(error => {
       wrongMessage();
-      console.error(error);
     });
 }
 
@@ -82,7 +81,7 @@ async function fetchData(userMail, userComment) {
 function wrongMessage() {
   iziToast.error({
     message:
-      'Error! All fields must be filled in. Please, check your information and try again',
+      'Error! Please, check if you entered correct information and try again!',
     position: 'topRight',
     backgroundColor: 'red',
     titleColor: 'white',
