@@ -44,6 +44,7 @@
 
   .greeting-accent{
     color: var(--color-green);
+    font-size: 62px;
   }
 
   .order-container {
@@ -82,7 +83,7 @@
     height: 92px;
     background-color: var(--color-cta-button);
     position: absolute;
-    left: 135px;
+    left: 115px;
     z-index: 0;
     transition: background-color 250ms ease-in-out;
   }

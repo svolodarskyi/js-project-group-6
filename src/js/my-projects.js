@@ -1,7 +1,3 @@
-// const { document } = require('postcss');
-
-console.log('lalala');
-
 const projectsList = document.querySelector('.projects-list');
 const loadMoreBtn = document.querySelector('.projects-load-btn');
 
