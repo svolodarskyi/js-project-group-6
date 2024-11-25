@@ -1,15 +1,12 @@
-.theme-light{
+.theme-light {
   --color-text: var(--color-black);
   --modal-background: var(--color-white);
 }
 
-.theme-dark{
+.theme-dark {
   --color-text: var(--color-white);
   --modal-background: var(--color-grey);
 }
-
-
-
 
 .work-together {
   padding-top: 80px;
@@ -40,7 +37,7 @@
   margin-bottom: 32px;
   color: var(--color-text);
 }
-.work-together .address {
+.work-together-address {
   margin-bottom: 40px;
 }
 
@@ -266,7 +263,7 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
-  .work-together .address {
+  .work-together-address {
     margin-bottom: 60px;
   }
 
@@ -398,7 +395,7 @@
     justify-content: space-between;
   }
   .work-together-text,
-  .work-together .address {
+  .work-together-address {
     margin-bottom: 0;
   }
 

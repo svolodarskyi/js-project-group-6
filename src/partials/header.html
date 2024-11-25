@@ -1,3 +1,58 @@
-<header>
+<header class="header">
+    <div class="container header-container">
+        <nav class="nav">
+            <a class="header-logo-lloyd header-logo" href="./index.html">Lloyd<span
+                    class="header-logo-jefferson">Jefferson.</span></a>
 
+            <div class="theme-toggle-container">
+                <button class="theme-toggle-btn" id="themeToggle">
+                    <svg class="theme-icon theme-icon-light" width="48" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="24" rx="12" fill="var(--color-grey)" />
+                        <circle cx="12" cy="12" r="10" fill="var(--color-green)" />
+                    </svg>
+                    <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.00872e-06 19.1679C3.53181 17.6248 6 14.1006 6 10C6 5.89936 3.53181 2.3752 -7.61556e-08 0.832087C1.22492 0.296895 2.57779 0 4 0C9.52285 0 14 4.47715 14 10C14 15.5228 9.52285 20 4 20C2.57779 20 1.22493 19.7031 3.00872e-06 19.1679Z"
+                            fill="#00B068" />
+                    </svg>
+                </button>
+            </div>
+
+
+            <ul class="menu">
+                <li><a class="header-link" href="#about-me">About me</a></li>
+                <li><a class="header-link" href="#projects">Projects</a></li>
+                <li><a class="header-link" href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+        <button class="burger-btn" type="button">
+            <svg class="burger-icon" width="32" height="32">
+                <use href="./img/symbol-defs.svg#icon-material-symbols-light_menu"></use>
+            </svg>
+        </button>
+    </div>
+    <script src="main.js"></script>
 </header>
+
+
+<div class="modal" id="modal">
+    <div class="modal-container ">
+        <div class="modal-header">
+            <div class="modal-header-container">
+                <a class="header-logo-lloyd modal-logo" href="./index.html">Lloyd<span
+                        class="header-logo-jefferson">Jefferson.</span></a>
+                <button class="close-btn" id="close-btn" type="button">
+                    <svg class="svg-modal-x" width="32" height="32">
+                        <use href="./img/symbol-defs.svg#icon-x"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul class="modal-menu">
+            <li><a class="modal-link" href="#about-me">About me</a></li>
+            <li><a class="modal-link" href="#projects">Projects</a></li>
+            <li><a class="modal-link" href="#contacts">Contacts</a></li>
+        </ul>
+
+    </div>
+</div>
