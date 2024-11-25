@@ -1,0 +1,138 @@
+.theme-light {
+    --color-top-line-text: var(--color-black);
+    --color-top-line-background: var(--color-green-saturated);
+    --color-top-line-dot: var(--color-green);
+    --color-bottom-line-text: var(--color-green);
+    --color-bottom-line-background: var(--color-grey);
+    --color-bottom-line-dot: var(--color-black);
+}
+
+.theme-dark {
+    --color-top-line-text: var(--color-white);
+    --color-top-line-background: var(--color-green-saturated);
+    --color-top-line-dot: var(--color-green);
+    --color-bottom-line-text: var(--color-green);
+    --color-bottom-line-background: var(--color-grey);
+    --color-bottom-line-dot: var(--color-white);
+}
+
+.tech-skills-section{
+    padding-bottom: 80px;
+}
+
+.tech-skills-container{
+    width: 100%;
+}
+
+.tech-skills-container > h2{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(100%);
+}
+
+
+
+.wrapper{
+    max-height: 244px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+}
+
+.rotate-right {
+    transform: rotate(2deg);
+}
+
+.marquee-text{
+    overflow: hidden;
+    
+}
+
+.marquee-text-track{
+    display: flex;
+    gap: 56px;
+    animation: marquee-move-text var(--speed, 10s) linear infinite var(--direction, forwards);
+    /*because child element can no go past the parent container*/
+    width: max-content;
+    justify-content: center;
+    align-items: center;
+    height: 128px;
+    
+   
+}
+
+.marquee-text {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    
+}
+
+
+
+.marquee-text.top-line{
+    color: var(--color-top-line-text);
+    background-color: var(--color-top-line-background);
+}
+
+.marquee-text.bottom-line {
+    color: var(--color-bottom-line-text);
+    background-color: var(--color-bottom-line-background);
+}
+
+.marquee-text p {
+    /* This ensures the pseudo-element is positioned relative to the <p> element */
+    position: relative;
+   
+}
+
+.marquee-text p::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 20px;
+    left: -30px;
+}
+
+.marquee-text.top-line p::before {
+    background-color: var(--color-top-line-dot);
+}
+
+.marquee-text.bottom-line  p::before {
+    background-color: var(--color-bottom-line-dot);
+}
+
+
+@keyframes marquee-move-text {
+    0% {
+            transform: translateX(0%);
+        }
+    
+        100% {
+            transform: translateX(-33.7%);
+        }
+}
+
+@media only screen and (min-width: 768px) {
+    .tech-skills-section{
+        padding-bottom: 124px;
+    }
+  }
+  
+@media only screen and (min-width: 1280px) {
+    .tech-skills-section{
+        padding-bottom: 164px;
+    }
+  }

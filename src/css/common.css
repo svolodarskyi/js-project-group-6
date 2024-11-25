@@ -47,8 +47,7 @@
     --background-color: var(--color-black);
 } 
 
-
 body{
     background-color: var(--background-color);
+}
 
- }
