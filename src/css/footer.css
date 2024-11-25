@@ -1,3 +1,13 @@
+.theme-light{
+    --color-text: var(--color-black);
+    --modal-background: var(--color-white);
+  }
+  
+  .theme-dark{
+    --color-text: var(--color-white);
+    --modal-background: var(--color-grey);
+  }
+
 .footer {
     border-top: 1px solid var(--color-grey);
     /*Здесь можно подключить через var если ты его добавишь*/
@@ -14,11 +24,12 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     margin-bottom: 32px;
+    color: var(--color-text);
 
 }
 
 .name-bold {
-    color: var(--color-black);
+    color: var(--color-text);
 
 }
 
@@ -37,7 +48,7 @@
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.03em;
-    color: var(--color-black);
+    color: var(--color-text);
 }
 
 .links-item:hover,
@@ -87,7 +98,7 @@
     line-height: 150%;
     letter-spacing: 0.03em;
     text-align: center;
-    color: var(--color-black);
+    color: var(--color-text);
 }
 
 @media only screen and (min-width: 768px) {
