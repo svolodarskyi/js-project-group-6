@@ -76,7 +76,10 @@
   justify-content: space-between;
 }
 
-img {
+.icon {
+  stroke: var(--color-text);
+  fill: transparent;
+  flex-shrink: 0;
   transition: 600ms;
 }
 
@@ -93,7 +96,7 @@ img {
     margin-top: 24px;
   }
 
-  img {
+  .icon {
     transform: rotate(-180deg);
     transition: 600ms;
   }
