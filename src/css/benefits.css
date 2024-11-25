@@ -58,9 +58,7 @@
         color: var(--text-main-color);
    
     }
-    .benefits-c p:last-child{
-        margin-bottom: 32px;
-    }
+
     #error{
         margin-bottom: 0;
     }
@@ -130,10 +128,6 @@
             margin: 0 auto;
             
             }
-
-        .benefits.section{
-            
-        }    
    
         .benefits-title{
             max-width: 700px;
