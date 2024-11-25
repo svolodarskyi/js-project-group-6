@@ -1,0 +1,201 @@
+.theme-light{
+  --color-text: var(--color-black);
+  --modal-background: var(--color-white);
+}
+
+.theme-dark{
+  --color-text: var(--color-white);
+  --modal-background: var(--color-grey);
+}
+
+/* Styles for Mobile devices */
+
+.section-faq{
+  padding-top: 80px;
+}
+
+.faq-title {
+  font-family: var(--font-section-header);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.faq-list-item-title {
+  font-family: var(--font-text);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+.faq-list-item-panel {
+  font-family: var(--font-text);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+}
+.span-faq-title {
+  color: var(--color-green);
+}
+/* ---------------------------------- */
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.faq-list-item {
+  padding: 28px 24px;
+  cursor: pointer;
+  border-bottom: 1px solid #e4e5e6;
+}
+.faq-list-item:hover {
+  /* background-color: var(--color-grey-hover); */
+  transition: 600ms;
+}
+
+.faq-list-item-title-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+img {
+  transition: 600ms;
+}
+
+.faq-list-item-panel {
+  opacity: 0;
+}
+
+.is-Active-faq-list-item {
+  border-radius: 16px;
+  background: var(--color-green-saturated);
+
+  .faq-list-item-panel {
+    opacity: 1;
+    margin-top: 24px;
+  }
+
+  img {
+    transform: rotate(-180deg);
+    transition: 600ms;
+  }
+}
+
+/* Styles for Tablet devices -----------------*/
+
+@media only screen and (min-width: 768px) {
+  .section-faq{
+    padding-top: 124px;
+  }
+
+  .faq-title {
+    /* font-family: inherit;
+    font-weight: 400; */
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+    /* text-transform: uppercase;
+    color: var(--color-black); */
+  }
+
+  .faq-list-item-title {
+    /* font-family: inherit;
+    font-weight: 400; */
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    /* text-transform: uppercase;
+    color: var(--color-black); */
+  }
+
+  .faq-list-item-text {
+    /* font-family: inherit;
+    font-weight: 300; */
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    /* text-transform: uppercase;
+    color: var(--color-black); */
+  }
+}
+
+.faq-container {
+  gap: 60px;
+}
+/* Styles for Desktop devices ==================*/
+@media only screen and (min-width: 1280px) {
+
+  .section-faq{
+    padding-top: 164px;
+  }
+
+
+  .faq-title {
+    /* font-family: inherit;
+    font-weight: 400; */
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+    width: 520px;
+     margin-bottom: 648px;
+  }
+
+  .faq-list-item-title {
+    /* font-family: inherit;
+    font-weight: 400; */
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0.03em;
+    /* text-transform: uppercase;
+    color: var(--color-black); */
+  }
+
+  .faq-list-item-text {
+    /* font-family: inherit;
+    font-weight: 300; */
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    /* text-transform: uppercase;
+    color: var(--color-black); */
+  }
+
+  .faq-container {
+    display: flex;
+    gap: 104px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-image: url(../img/faq/decor-bg1x.png);
+    background-repeat: no-repeat, repeat;
+    background-position: 20px 100%;
+    background-size: 526px 408px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-resolution: 192dpi) {
+  .container{
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .faq-container {
+    background-image: url(../img/faq/decor-bg2x.png);
+  }
+}
