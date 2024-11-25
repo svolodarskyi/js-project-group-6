@@ -74,9 +74,17 @@
     <symbol id="icon-arrow-down" viewBox="0 0 32 32">
             <path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M22 13l-6 6-6-6"></path>
         </symbol>
-    
+    <symbol id="icon-arrow-narrow-right-1" viewBox="0 0 32 32">
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M5.333 16h21.333"></path>
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M18.667 8l8 8-8 8"></path>
+    </symbol>
+  <symbol id="icon-arrow-narrow-right-3" viewBox="0 0 24 24">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M20 12h-16"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M10 18l-6-6 6-6"></path>
+</symbol>
+<symbol id="icon-arrow-narrow-right-3" viewBox="0 0 24 24">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M20 12h-16"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M10 18l-6-6 6-6"></path>
+</symbol>
 </defs>
 </svg>
-
-
-
