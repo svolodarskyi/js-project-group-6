@@ -5,26 +5,16 @@ https://medium.com/@haxzie/dark-and-light-theme-switcher-using-css-variables-and
 -- add event listener on the toggle element and add callback function toggleTheme() below
 */
 
-function toggleModalContentVisibility(themeName) {
-  const modalContent = document.querySelector('.dynamic-content');
-  if (themeName === 'theme-dark') {
-    modalContent.style.display = 'flex';
-  } else {
-    modalContent.style.display = 'none';
-  }
-}
-
 function setTheme(themeName) {
   document.body.className = themeName;
   localStorage.setItem('theme', themeName);
-
-  toggleModalContentVisibility(themeName);
 }
 
 (function () {
   const savedTheme = localStorage.getItem('theme') || 'theme-light';
   setTheme(savedTheme);
 })();
+
 document.getElementById('themeToggle').addEventListener('click', () => {
   const currentTheme = localStorage.getItem('theme');
   const newTheme = currentTheme === 'theme-dark' ? 'theme-light' : 'theme-dark';
