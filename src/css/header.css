@@ -94,7 +94,7 @@ body {
 
 
     .header-logo {
-        margin-right: 211px;
+        margin-right: 131px;
     }
 
     .burger-btn {
@@ -126,22 +126,11 @@ body {
         color: var(--color-green-hover);
 
     }
-}
-
-@media only screen and (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
-    }
-
-    .header-logo {
-        margin-right: 603px;
-    }
 
     .theme-toggle-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px;
     }
 
     .theme-toggle-btn {
@@ -182,6 +171,18 @@ body {
     body.theme-dark .theme-icon-dark {
         opacity: 1;
     }
+}
+
+@media only screen and (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+
+    .header-logo {
+        margin-right: 643px;
+    }
+
+
 }
 
 .modal {
@@ -291,9 +292,6 @@ body {
     padding: 16px 16px 16px 0;
 }
 
-body.theme-dark .svg-modal-x {
-    fill: var(--color-white);
-}
 
 .svg-modal-x {
     fill: var(--color-black);
