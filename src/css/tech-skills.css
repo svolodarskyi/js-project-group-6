@@ -16,6 +16,10 @@
   --color-bottom-line-dot: var(--color-white);
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .tech-skills-section {
   padding-bottom: 80px;
 }
@@ -43,7 +47,7 @@
   font-size: 32px;
   line-height: 40px;
   letter-spacing: 0.5px;
-  width: 350px;
+
 }
 
 .rotate-right {
@@ -122,13 +126,18 @@
     padding-bottom: 124px;
   }
 
-  .wrapper{
-        width: 100%;
-    }
+ 
 }
 
 @media only screen and (min-width: 1280px) {
   .tech-skills-section {
     padding-bottom: 164px;
+  }
+}
+
+
+@media only screen and (max-width: 320px){
+  .wrapper{
+    width: 330px;
   }
 }
