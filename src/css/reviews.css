@@ -56,6 +56,12 @@
   font-size: 22px;
   border-radius: 8px;
   border: 1 px solid var(--color-black);
+  align-items: center;
+  /* color: #e4e5e6; */
+}
+
+.swiper-btn-back.icon {
+  fill: red;
 }
 
 .btn-back:hover,
