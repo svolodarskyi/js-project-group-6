@@ -1,4 +1,18 @@
+.theme-light{
+  --color-text: var(--color-black);
+  --modal-background: var(--color-white);
+}
+
+.theme-dark{
+  --color-text: var(--color-white);
+  --modal-background: var(--color-grey);
+}
+
 /* Styles for Mobile devices */
+
+.section-faq{
+  padding-top: 80px;
+}
 
 .faq-title {
   font-family: var(--font-section-header);
@@ -7,24 +21,25 @@
   line-height: 123%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: var(--color-text);
 }
+
 .faq-list-item-title {
-  font-family: var(--font-section-header);
+  font-family: var(--font-text);
   font-weight: 400;
   font-size: 18px;
   line-height: 156%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: var(--color-text);
 }
-.faq-list-item-text {
+.faq-list-item-panel {
   font-family: var(--font-text);
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
-  color: var(--color-black);
+  color: var(--color-text);
 }
 .span-faq-title {
   color: var(--color-green);
@@ -55,6 +70,7 @@
 .faq-list-item-title-container {
   display: flex;
   flex-direction: row;
+  gap: 16px;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -85,6 +101,10 @@ img {
 /* Styles for Tablet devices -----------------*/
 
 @media only screen and (min-width: 768px) {
+  .section-faq{
+    padding-top: 124px;
+  }
+
   .faq-title {
     /* font-family: inherit;
     font-weight: 400; */
@@ -121,6 +141,12 @@ img {
 }
 /* Styles for Desktop devices ==================*/
 @media only screen and (min-width: 1280px) {
+
+  .section-faq{
+    padding-top: 164px;
+  }
+
+
   .faq-title {
     /* font-family: inherit;
     font-weight: 400; */
@@ -128,9 +154,7 @@ img {
     line-height: 115%;
     letter-spacing: 0.02em;
     width: 520px;
-    /* text-transform: uppercase;
-    color: var(--color-black); */
-    margin-bottom: 648px;
+     margin-bottom: 648px;
   }
 
   .faq-list-item-title {
@@ -155,6 +179,7 @@ img {
 
   .faq-container {
     display: flex;
+    gap: 104px;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
@@ -166,6 +191,10 @@ img {
 }
 
 @media screen and (min-width: 1280px) and (min-resolution: 192dpi) {
+  .container{
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   .faq-container {
     background-image: url(../img/faq/decor-bg2x.png);
   }
