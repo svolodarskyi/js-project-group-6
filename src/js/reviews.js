@@ -8,7 +8,8 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 register();
 
-const reviewsEl = document.querySelector('.reviews-container');
+const reviewsEl = document.querySelector('.swiper');
+
 let swiper;
 
 const createReviewsCard = cardInfo => {
