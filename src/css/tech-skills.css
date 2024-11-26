@@ -24,7 +24,7 @@
   width: 100%;
 }
 
-.tech-skills-container > h2 {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -122,9 +122,9 @@
     padding-bottom: 124px;
   }
 
-  .wrapper{
-        width: 100%;
-    }
+  .wrapper {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
