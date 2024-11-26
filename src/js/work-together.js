@@ -108,7 +108,7 @@ function openModal(title, message) {
     ) {
       closeOverlay();
       const formBtn = document.querySelector('.work-together-btn');
-      formBtn.style.backgroundColor = 'var(--color-green)';
+      formBtn.blur();
     }
   };
 
