@@ -100,6 +100,7 @@
     width: 704px;
     height: 224px;
     border-radius: 16px;
+    padding: 32px;
   }
 
   /* .swiper-wrapper .swiper-slide {
