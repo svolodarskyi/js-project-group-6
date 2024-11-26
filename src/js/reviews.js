@@ -24,7 +24,9 @@ const createReviewsCard = cardInfo => {
 
 const fetchReviews = async () => {
   try {
-    const response = await fetch('https://portfolio-js.b.goit.study/api/reviews');
+    const response = await fetch(
+      'https://portfolio-js.b.goit.study/api/reviews'
+    );
     if (!response.ok) {
       throw new Error(`HTTP Error: ${response.status}`);
     }
@@ -52,9 +54,9 @@ const initReviewsSwiper = async () => {
     .join('');
   reviewsEl.querySelector('.swiper-wrapper').innerHTML = reviewsListHTML;
 
-  // Initialize the swiper instance
   swiper = new Swiper('.swiper', {
     slidesPerView: 1,
+    spaceBetween: 8,
     keyboard: {
       enabled: true,
     },
@@ -68,6 +70,7 @@ const initReviewsSwiper = async () => {
     breakpoints: {
       768: {
         slidesPerView: 1,
+        spaceBetween: 10,
       },
       1280: {
         slidesPerView: 2,
@@ -81,11 +84,11 @@ const initReviewsSwiper = async () => {
     },
   });
 
-  chnageBtnState(); // 
+  chnageBtnState();
 };
 
 function chnageBtnState() {
-  if (!swiper) return; // 
+  if (!swiper) return;
 
   const nextBtn = document.querySelector('.swiper-btn-next');
   const prevBtn = document.querySelector('.swiper-btn-back');
@@ -99,18 +102,16 @@ function chnageBtnState() {
   backIcon.style.transition = 'none';
   nextIcon.style.transition = 'none';
 
-  
-
   if (swiper.isEnd) {
     nextIcon.style.stroke = 'var(--color-grey)';
     backIcon.style.stroke = 'var(--text-main-color)';
-  } 
+  }
   if (swiper.isBeginning) {
     backIcon.style.stroke = 'var(--color-grey)';
     nextIcon.style.stroke = 'var(--text-main-color)';
   }
 
-  if (!swiper.isEnd && !swiper.isBeginning ){
+  if (!swiper.isEnd && !swiper.isBeginning) {
     backIcon.style.stroke = 'var(--text-main-color)';
     nextIcon.style.stroke = 'var(--text-main-color)';
   }
@@ -119,5 +120,4 @@ function chnageBtnState() {
   prevBtn.classList.toggle('disabled', swiper.isBeginning);
 }
 
-// Initialize the reviews swiper
 initReviewsSwiper();
