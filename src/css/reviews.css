@@ -18,7 +18,6 @@
 
 .swiper-wrapper {
   margin-bottom: 24px;
-  width: 360px;
 }
 
 .swiper-wrapper .swiper-slide {
@@ -98,10 +97,9 @@
   }
 
   #slide {
-    width: 704px;
+    width: 640px;
     height: 224px;
     border-radius: 16px;
-    padding: 32px;
   }
 
   /* .swiper-wrapper .swiper-slide {
@@ -111,7 +109,7 @@
   } */
 
   .user-info {
-    width: 640px;
+    width: 680px;
   }
 
   
