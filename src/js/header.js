@@ -1,19 +1,10 @@
-/*
-Blogpost with theme toggle implementation
-https://medium.com/@haxzie/dark-and-light-theme-switcher-using-css-variables-and-pure-javascript-zocada-dd0059d72fa2
-
--- add event listener on the toggle element and add callback function toggleTheme() below
-*/
-
 function setTheme(themeName) {
   document.body.className = themeName;
   localStorage.setItem('theme', themeName);
 }
 
-(function () {
-  const savedTheme = localStorage.getItem('theme') || 'theme-light';
+const savedTheme = localStorage.getItem('theme') || 'theme-light';
   setTheme(savedTheme);
-})();
 
 document.getElementById('themeToggle').addEventListener('click', () => {
   const currentTheme = localStorage.getItem('theme');
@@ -25,6 +16,14 @@ const burgerBtn = document.querySelector('.burger-btn');
 const modal = document.getElementById('modal');
 const modalContainer = modal.querySelector('.modal-container');
 const closeBtn = document.getElementById('close-btn');
+
+const mobileLinks = document.querySelectorAll(".modal-link");
+
+mobileLinks.forEach(link =>{
+  link.addEventListener("click", ()=>{
+    modal.classList.remove('active');
+  })
+})
 
 burgerBtn.addEventListener('click', () => {
   modal.classList.add('active');
