@@ -63,10 +63,10 @@
   cursor: pointer;
   border-bottom: 1px solid #e4e5e6;
 }
-.faq-list-item:hover {
-  /* background-color: var(--color-grey-hover); */
-  transition: 600ms;
-}
+/* .faq-list-item:hover {
+   background-color: var(--color-grey-hover); 
+  transition: 250ms;
+} */
 
 .faq-list-item-title-container {
   display: flex;
@@ -80,7 +80,7 @@
   stroke: var(--color-text);
   fill: transparent;
   flex-shrink: 0;
-  transition: 600ms;
+  transition: 250ms;
 }
 
 .faq-list-item-panel {
@@ -97,8 +97,8 @@
   }
 
   .icon {
-    transform: rotate(-180deg);
-    transition: 600ms;
+    transform: rotate(180deg);
+    transition: 250ms;
   }
 }
 
