@@ -56,7 +56,7 @@ const initReviewsSwiper = async () => {
 
   new Swiper('.swiper', {
     slidesPerView: 1,
-    // direction: 'horizontal',
+    spaceBetween: 8,
     keyboard: {
       enabled: true,
     },
@@ -71,6 +71,7 @@ const initReviewsSwiper = async () => {
     breakpoints: {
       768: {
         slidesPerView: 1,
+        spaceBetween: 10,
       },
       1280: {
         slidesPerView: 2,
