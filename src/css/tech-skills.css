@@ -16,10 +16,6 @@
   --color-bottom-line-dot: var(--color-white);
 }
 
-body{
-  overflow-x: hidden;
-}
-
 .tech-skills-section {
   padding-bottom: 80px;
 }
