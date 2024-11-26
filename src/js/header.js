@@ -4,7 +4,7 @@ function setTheme(themeName) {
 }
 
 const savedTheme = localStorage.getItem('theme') || 'theme-light';
-  setTheme(savedTheme);
+setTheme(savedTheme);
 
 document.getElementById('themeToggle').addEventListener('click', () => {
   const currentTheme = localStorage.getItem('theme');
