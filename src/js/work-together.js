@@ -21,13 +21,13 @@ function handleInput() {
 
   if (!value || !regex.test(value)) {
     wrongMsg.hidden = false;
-    inputEmail.style.color = `#e74a3b`;
+    inputEmail.style.color = 'var(--color-red-error)';
     if (value === '') {
       wrongMsg.hidden = true;
     }
   } else {
     succesIcon.style.display = 'block';
-    inputEmail.style.color = `inherit`;
+    inputEmail.style.color = 'var(--color-text)';
   }
 }
 
@@ -108,9 +108,7 @@ function openModal(title, message) {
     ) {
       closeOverlay();
       const formBtn = document.querySelector('.work-together-btn');
-      const rootStyles = getComputedStyle(document.documentElement);
-      const colorGreen = rootStyles.getPropertyValue('--color-green').trim();
-      formBtn.style.background = colorGreen;
+      formBtn.style.backgroundColor = 'var(--color-green)';
     }
   };
 
