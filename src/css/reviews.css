@@ -18,6 +18,7 @@
 
 .swiper-wrapper {
   margin-bottom: 24px;
+  width: 360px;
 }
 
 .swiper-wrapper .swiper-slide {
