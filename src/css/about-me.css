@@ -51,7 +51,7 @@
     
 }
 
-.text-gap {
+.text-gap:nth-of-type(1) {
     margin-bottom: 24px;
 }
 
@@ -228,23 +228,21 @@
         display: flex;
         gap: 136px;
         align-items: flex-start;
-        justify-content: center;
+        padding-left: 210px ;
     }
     
     .education-school{
         width: 384px;
-        position: relative;
-        left: -28px;
+
     }
 
     .education-list {
         max-width: 384px;
         gap: 16px;
     }
-    .education-technology{
-        position: relative;
-        left: -28px;
-    }
+
 }
+
+
 
 
