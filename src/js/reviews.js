@@ -57,7 +57,7 @@ const initReviewsSwiper = async () => {
 
   swiper = new Swiper('.swiper', {
     slidesPerView: 1,
-    spaceBetween: 14,
+    spaceBetween: 8,
     keyboard: {
       enabled: true,
     },
