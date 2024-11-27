@@ -3,11 +3,12 @@ const modal = document.getElementById('modal');
 const modalContainer = modal.querySelector('.modal-container');
 const closeBtn = document.getElementById('close-btn');
 
-const mobileLinks = document.querySelectorAll('mobile-menu-link');
+const mobileLinks = document.querySelectorAll('.mobile-menu-link');
 
 mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     modal.classList.remove('active');
+    modalContainer.classList.remove('active');
   });
 });
 

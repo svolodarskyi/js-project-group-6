@@ -193,6 +193,7 @@
 .work-together-btn:focus {
   border: none;
   background-color: var(--color-green-hover);
+  color: var(--color-white);
   animation: pulse 1s cubic-bezier(0.31, 0.7, 0.83, 0.67);
 }
 
@@ -236,9 +237,25 @@
   background-color: inherit;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .menu-close-btn-icon {
   stroke: var(--color-text);
+  transition: transform 2s linear infinite;
+}
+
+.close-button:hover .menu-close-btn-icon {
+  animation: spin 2s linear infinite;
 }
 
 .work-overlay-title {
@@ -275,9 +292,10 @@
   .bg-wrap::before {
     content: '';
     position: absolute;
-    top: -120px;
+    top: -116px;
+    right: 32px;
     height: 260px;
-    width: 100%;
+    width: 336px;
     background-position: right top;
     background-size: 336px 260px;
     background-repeat: no-repeat;
@@ -288,7 +306,6 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .bg-wrap::before {
-      background-size: 336px 260px;
       background-image: url(../img/work-together/decor-bg-4-tablet-2x.png);
     }
   }
@@ -310,10 +327,6 @@
   .work-together {
     padding-top: 124px;
     padding-bottom: 124px;
-  }
-
-  .work-together .container {
-    padding: 0 32px;
   }
 
   .work-together .title {
@@ -361,9 +374,10 @@
   .bg-wrap::before {
     content: '';
     position: absolute;
-    top: -166px;
-    width: 100%;
-    height: 526px;
+    top: -116px;
+    right: 32px;
+    width: 526px;
+    height: 408px;
     background-position: right top;
     background-repeat: no-repeat;
     background-size: 526px 408px;
@@ -374,7 +388,6 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .bg-wrap::before {
-      background-size: 526px 408px;
       background-image: url(../img/work-together/decor-bg-4-desktop-2x.png);
     }
   }
