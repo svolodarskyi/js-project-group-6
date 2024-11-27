@@ -1,4 +1,3 @@
-
 /* Common styles */
 @import url('./reset.css');
 @import url('./common.css');
@@ -15,3 +14,4 @@
 @import url('./reviews.css');
 @import url('./work-together.css');
 @import url('./footer.css');
+@import url("./mobil-modal.css");
