@@ -9,11 +9,13 @@
   }
 .footer-section{
     border-top: 1px solid var(--color-grey);
+}
+
+.footer {
+    
+    /*Здесь можно подключить через var если ты его добавишь*/
     padding: 40px 20px 24px 20px;
 }
- .container{
-    padding: 0;
- }
 
 .footer-logo {
     /* font-family: var(--second-family); */
@@ -104,12 +106,8 @@
 
 @media only screen and (min-width: 768px) {
 
-
-    .footer-section{
-        padding: 40px 32px 24px 32px;
-    }
     .footer {
-        /* padding: 40px 32px 24px 32px; */
+        padding: 40px 32px 24px 32px;
         align-items: center;
         justify-content: space-between;
     }
