@@ -106,10 +106,6 @@
 
 @media only screen and (min-width: 768px) {
 
-    .container {
-        max-width: 768px;
-    }
-
     .footer {
         padding: 40px 32px 24px 32px;
         align-items: center;
@@ -131,9 +127,7 @@
 
 
 @media only screen and (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
-    }
+
 
     .footer {
         display: flex;
