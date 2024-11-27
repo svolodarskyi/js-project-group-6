@@ -16,7 +16,10 @@
 
 .modal-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    padding: 20px 20px;
     height: 100%;
     background: var(--color-modal-container);
     transform: translateY(-100%);
@@ -28,13 +31,22 @@
 
 
 .modal-header-container {
-    height: 64px;
-    padding: 20px;
+    min-width: 320px;
+    max-width: 360px;
+    height: 32px;
+    /* padding: 0 20px; */
     display: flex;
+    align-items: center;
     text-align: center;
     justify-content: space-between;
-    /* align-items: center; */
-    margin-bottom: 279px;
+}
+
+.mobile-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
 
@@ -55,10 +67,6 @@
 .close-btn {
     border: none;
     background-color: transparent;
-    /* padding: 16px 16px 16px 0; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -71,12 +79,12 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-bottom: auto;
 }
 
 
 .mobile-menu-link {
-
+    width: 100%;
+    height: 100%;
     font-family: var(--font-family);
     font-weight: 300;
     font-size: 16px;
