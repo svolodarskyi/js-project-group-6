@@ -292,7 +292,7 @@
   .bg-wrap::before {
     content: '';
     position: absolute;
-    top: -116px;
+    top: -100px;
     right: 32px;
     height: 260px;
     width: 336px;
