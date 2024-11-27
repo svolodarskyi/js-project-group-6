@@ -148,7 +148,7 @@
 
     .footer-links {
         margin-bottom: 0;
-        margin-left: auto;
+        /* margin-left: auto; */
     }
 
     .copyright {

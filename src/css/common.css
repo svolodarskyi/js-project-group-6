@@ -48,6 +48,7 @@
 } 
 
 body{
-    background-color: var(--background-color);
+    max-width: 100%;
+    
 }
 

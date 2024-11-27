@@ -56,6 +56,7 @@
         line-height: 150%;
         letter-spacing: 0.03em;
         color: var(--text-main-color);
+        margin-bottom: 32px;
    
     }
 
@@ -111,6 +112,7 @@
         }
         .benefits-list-item{
             max-width: 336px;
+            margin-bottom: 0;
         }
         .benefits-list{
             font-size: 20px;
@@ -121,11 +123,9 @@
     @media only screen and (min-width: 1280px) {
         .benefits-section{
             padding-top: 164px;
-            max-width: 1280px;
             background-image: url(../img/benefits/benefits-decor-bg-desktop.png);
             background-repeat: no-repeat;
             background-position: top 50px right 32px;
-            margin: 0 auto;
             
             }
    
