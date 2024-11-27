@@ -16,8 +16,10 @@
 
 .modal-container {
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 20px 20px;
     height: 100%;
     background: var(--color-modal-container);
     transform: translateY(-100%);
@@ -29,8 +31,9 @@
 
 
 .modal-header-container {
-    height: 64px;
-    padding: 0 20px;
+    width: 320px;
+    height: 32px;
+    /* padding: 0 20px; */
     display: flex;
     align-items: center;
     text-align: center;
