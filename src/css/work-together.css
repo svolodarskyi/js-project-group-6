@@ -292,7 +292,7 @@
   .bg-wrap::before {
     content: '';
     position: absolute;
-    top: -100px;
+    top: -116px;
     right: 32px;
     height: 260px;
     width: 336px;
@@ -306,7 +306,6 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .bg-wrap::before {
-      background-size: 336px 260px;
       background-image: url(../img/work-together/decor-bg-4-tablet-2x.png);
     }
   }
@@ -375,7 +374,7 @@
   .bg-wrap::before {
     content: '';
     position: absolute;
-    top: -118px;
+    top: -116px;
     right: 32px;
     width: 526px;
     height: 408px;
@@ -389,7 +388,6 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .bg-wrap::before {
-      background-size: 526px 408px;
       background-image: url(../img/work-together/decor-bg-4-desktop-2x.png);
     }
   }
