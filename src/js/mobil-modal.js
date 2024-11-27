@@ -8,6 +8,7 @@ const mobileLinks = document.querySelectorAll('mobile-menu-link');
 mobileLinks.forEach(link => {
   link.addEventListener('click', () => {
     modal.classList.remove('active');
+    modalContainer.classList.remove('active');
   });
 });
 
