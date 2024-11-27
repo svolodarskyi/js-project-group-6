@@ -56,11 +56,10 @@
         line-height: 150%;
         letter-spacing: 0.03em;
         color: var(--text-main-color);
+        margin-bottom: 32px;
    
     }
-    .benefits-c p:last-child{
-        margin-bottom: 32px;
-    }
+
     #error{
         margin-bottom: 0;
     }
@@ -113,6 +112,7 @@
         }
         .benefits-list-item{
             max-width: 336px;
+            margin-bottom: 0;
         }
         .benefits-list{
             font-size: 20px;
@@ -130,10 +130,6 @@
             margin: 0 auto;
             
             }
-
-        .benefits.section{
-            
-        }    
    
         .benefits-title{
             max-width: 700px;
