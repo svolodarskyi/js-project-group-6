@@ -51,7 +51,6 @@
     display: flex;
     align-items: center;
     position: relative;
-    width: 320px;
     height: 92px;
     margin-bottom: 40px;
   }
@@ -245,6 +244,7 @@
     position:relative;
     background-repeat: no-repeat;
     background-position: top 10px center;
+    padding-top: 184px;
   }
 
   .presentation{
