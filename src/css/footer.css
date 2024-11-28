@@ -7,15 +7,12 @@
     --color-text: var(--color-white);
     --modal-background: var(--color-grey);
   }
+
 .footer-section{
     border-top: 1px solid var(--color-grey);
+    padding: 40px 0;
 }
 
-.footer {
-    
-    /*Здесь можно подключить через var если ты его добавишь*/
-    padding: 40px 20px 24px 20px;
-}
 
 .footer-logo {
     /* font-family: var(--second-family); */
@@ -106,8 +103,11 @@
 
 @media only screen and (min-width: 768px) {
 
+    .footer-section{
+        padding: 40px 0 24px 0    
+    }
     .footer {
-        padding: 40px 32px 24px 32px;
+        padding: 0 32px;
         align-items: center;
         justify-content: space-between;
     }
