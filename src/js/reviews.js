@@ -17,7 +17,7 @@ const createReviewsCard = cardInfo => {
     <li class="swiper-slide" id="slide">
         <p class="user-comment">${cardInfo.review}</p>
         <div class="user-info">
-          <img class="user-photo" src="${cardInfo.avatar_url}" alt="User photo" width="40" height="40" />
+          <img loading="lazy" class="user-photo" src="${cardInfo.avatar_url}" alt="User photo" width="40" height="40" />
           <h4 class="user-name">${cardInfo.author}</h4>
         </div>
     </li>`;
