@@ -28,13 +28,16 @@ body {
 }
 
 
+.header{
+   padding-bottom: 20px;
+    padding-top: 20px;
+}
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 20px;
-    padding-top: 20px;
+   
 }
 
 .theme-toggle-container {
@@ -80,14 +83,19 @@ body {
 
 
 @media screen and (min-width: 768px) {
+
+  .header{
+     padding-top: 32px;
+        padding-bottom: 32px;
+  }
+  
     .header-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
 
-        padding-top: 32px;
-        padding-bottom: 32px;
+       
     }
 
 
