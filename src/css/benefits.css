@@ -120,12 +120,12 @@
         }
     }
    
-    @media only screen and (min-width: 1280px) {
+     @media only screen and (min-width: 1280px) {
         .benefits-section{
-            padding-top: 164px;
-            background-image: url(../img/benefits/benefits-decor-bg-desktop.png);
-            background-repeat: no-repeat;
-            background-position: top 50px right 32px;
+                padding-top: 164px;
+                background-image: url(../img/benefits/benefits-decor-bg-desktop.png);
+                background-repeat: no-repeat;
+                background-position: calc(50% + 340px) 40px;
             
             }
    
